@@ -2,16 +2,17 @@ import "./App.css";
 import "./Navbar.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar";
+import { Carrito } from "./pages/carrito/Carrito";
+import { Productos } from "./pages/productos/Productos.jsx";
 
 function App() {
   return (
     <div className="App">
       <Router>
         <Navbar />
-        <header className="App-header">Punta Goods</header>
         <Routes>
-          <Route path="/" />
-          <Route path="/carrito" />
+          <Route path="/" element={<Productos />} />
+          <Route path="/carrito" element={<Carrito />} />
         </Routes>
       </Router>
     </div>

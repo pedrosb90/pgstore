@@ -6,7 +6,7 @@ import pglogo from "/Users/pedro/Desktop/PuntaGoods/pgstore/src/pg_logo-transp.p
 export const Navbar = () => {
   return (
     <div className="Nav-header">
-      <img className="Logo" src={pglogo} />
+      <img alt="img" className="Logo" src={pglogo} />
       <div className="Links">
         <Link to="/">Productos</Link>
         <Link to="/carrito">
