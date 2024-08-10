@@ -1,0 +1,58 @@
+.container {
+  justify-content: center;
+}
+
+.products {
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.title {
+  font-family: "Courier New", Courier, monospace;
+
+  justify-content: center;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 32px;
+}
+
+.item {
+  border-radius: 15px;
+  padding: 100px;
+  width: 350px;
+  height: 300px;
+  display: inline-flex;
+}
+.item :hover {
+  transition: 0.3s ease-in;
+}
+.item .description {
+  font-family: "Courier New", Courier, monospace;
+
+  text-align: left;
+  padding-right: 20px;
+  min-width: fit-content;
+}
+
+.imagen {
+  height: 250px;
+  width: 250px;
+}
+
+.btn {
+  background-color: transparent;
+  border: 2px solid black;
+  min-width: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+}
+
+.btn:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}

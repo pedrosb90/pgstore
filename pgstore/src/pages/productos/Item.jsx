@@ -5,9 +5,14 @@ export const Item = (props) => {
 
   return (
     <div className="item">
-      <h3 className="name">{nombre}</h3>
-      <p className="descrip">Tamaño: {tamaño}</p>
-      <h2 className="precio">Precio: $ {precio}</h2>
+      <div className="description">
+        {" "}
+        <h3 className="name">{nombre}</h3>
+        <p className="tamaño">Tamaño: {tamaño}</p>
+        <h2 className="precio">Precio: $ {precio}</h2>
+        <button className="btn">Agregar</button>
+      </div>
+
       <img className="imagen" src={imagen} alt="img" />
     </div>
   );

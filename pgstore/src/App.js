@@ -1,5 +1,6 @@
 import "./App.css";
 import "./Navbar.css";
+import "./Shop.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { Carrito } from "./pages/carrito/Carrito";

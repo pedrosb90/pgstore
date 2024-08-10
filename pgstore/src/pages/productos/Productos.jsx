@@ -4,13 +4,11 @@ import { Item } from "../productos/Item";
 
 export const Productos = () => {
   return (
-    <div className="productos">
-      <div
-        className="nombre-ti
-      enda"
-      >
-        <h1>Punta Goods Shop</h1>
-        <div className="productos-items">
+    <div className="container">
+      <h1 className="title">Shop</h1>
+
+      <div className="products">
+        <div>
           {shopitems.map((producto) => (
             <Item data={producto} />
           ))}
