@@ -21,7 +21,22 @@ export const Shop_context_provider = (props) => {
   const quitarCarrito = (id) => {
     setItemsCarrito((prev) => ({ ...prev, [id]: prev[id] - 1 }));
   };
-  const contextValue = { itemsCarrito, agregarCarrito, quitarCarrito };
+
+  const cambiarValorCantidad = (nuevaCuenta, id) => {
+    setItemsCarrito((prev) => {
+      return {
+        ...prev,
+        [id]: nuevaCuenta,
+      };
+    });
+  };
+
+  const contextValue = {
+    itemsCarrito,
+    agregarCarrito,
+    quitarCarrito,
+    cambiarValorCantidad,
+  };
 
   return (
     <Shop_context.Provider value={contextValue}>
