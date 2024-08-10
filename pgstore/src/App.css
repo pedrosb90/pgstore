@@ -13,7 +13,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  font-family: "Courier New", Courier, monospace;
 }
 
 @keyframes App-logo-spin {

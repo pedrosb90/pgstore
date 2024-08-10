@@ -1,0 +1,17 @@
+.carrito {
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-carrito {
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 3px 5px black;
+  border-radius: 25px;
+  margin: 30px;
+  padding: 20px;
+}
