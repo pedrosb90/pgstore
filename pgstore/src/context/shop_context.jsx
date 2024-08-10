@@ -1,12 +1,12 @@
 import React from "react";
 import { useState, createContext } from "react";
-import { Productos } from "../pages/productos/Productos";
+import { shopitems } from "../pages/productos/shopitems";
 
 export const Shop_context = createContext(null);
 
 const defaultCarrito = () => {
-  let cart = {};
-  for (let i = 1; i < Productos.length; i++) {
+  let cart = [];
+  for (let i = 0; i < shopitems.length; i++) {
     cart[i] = 0;
   }
   return cart;
@@ -21,6 +21,11 @@ export const Shop_context_provider = (props) => {
   const quitarCarrito = (id) => {
     setItemsCarrito((prev) => ({ ...prev, [id]: prev[id] - 1 }));
   };
+  const contextValue = { itemsCarrito, agregarCarrito, quitarCarrito };
 
-  return <Shop_context.Provider>{props.children}</Shop_context.Provider>;
+  return (
+    <Shop_context.Provider value={contextValue}>
+      {props.children}
+    </Shop_context.Provider>
+  );
 };
