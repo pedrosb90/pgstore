@@ -27,6 +27,8 @@ export const Carrito = () => {
 
       <div className="total-check">
         <h1>Total a pagar: $ {totalCheck}</h1>
+        <button className="btn-out"> Seguir comprando</button>
+        <button className="btn-out">Pagar</button>
       </div>
     </div>
   );

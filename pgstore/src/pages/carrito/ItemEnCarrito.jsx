@@ -21,15 +21,22 @@ export const ItemEnCarrito = (props) => {
         <p> {tamaño}</p>
         <h2>$ {precio}</h2>
         <div className="cuenta">
-          <button onClick={() => quitarCarrito(id)}> - </button>
+          <button className="cantidad-btn" onClick={() => quitarCarrito(id)}>
+            {" "}
+            -{" "}
+          </button>
           <input
+            className="cantidad"
             value={cantidadEnCarrito}
             onChange={(e) => cambiarValorCantidad(Number(e.target.value), id)}
           />
-          <button onClick={() => agregarCarrito(id)}> + </button>
+          <button className="cantidad-btn" onClick={() => agregarCarrito(id)}>
+            {" "}
+            +{" "}
+          </button>
         </div>
         <div className="total-item">
-          <h2>Sub Total: $ {totalPrecioItem}</h2>
+          <h4>Sub Total: $ {totalPrecioItem}</h4>
         </div>
       </div>{" "}
     </div>
