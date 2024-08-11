@@ -7,7 +7,7 @@
 }
 
 .item-carrito {
-  width: 700px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 3px 5px black;
@@ -16,7 +16,9 @@
   padding: 20px;
 }
 .btn-out {
-  background-color: transparent;
+  background-color: black;
+  color: white;
+  font-weight: 600;
   border: 4px solid black;
   min-width: 150px;
   height: 60px;
@@ -30,8 +32,8 @@
 }
 
 .btn-out:hover {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
   cursor: pointer;
 }
 .total-check {
@@ -48,4 +50,13 @@
   border-radius: 5px;
   color: white;
   background-color: black;
+}
+.image-carro {
+  height: 150px;
+  width: 150px;
+}
+@media only screen and (max-width: 480px) {
+  .item-carrito {
+    width: 80vw;
+  }
 }

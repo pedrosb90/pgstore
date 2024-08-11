@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { shopitems } from "../productos/shopitems";
 import { Shop_context } from "../../context/shop_context";
 import { ItemEnCarrito } from "./ItemEnCarrito";
+import { useNavigate } from "react-router-dom";
 
 export const Carrito = () => {
   const { itemsCarrito } = useContext(Shop_context);
@@ -11,6 +12,8 @@ export const Carrito = () => {
     const itemCantidad = itemsCarrito[item.id] || 0;
     return acc + itemCantidad * item.precio;
   }, 0);
+
+  const navigate = useNavigate();
 
   return (
     <div className="carrito">
@@ -27,7 +30,10 @@ export const Carrito = () => {
 
       <div className="total-check">
         <h1>Total a pagar: $ {totalCheck}</h1>
-        <button className="btn-out"> Seguir comprando</button>
+        <button onClick={() => navigate("/")} className="btn-out">
+          {" "}
+          Seguir comprando
+        </button>
         <button className="btn-out">Pagar</button>
       </div>
     </div>

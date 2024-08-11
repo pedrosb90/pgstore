@@ -10,11 +10,16 @@
 }
 .title {
   font-family: "Courier New", Courier, monospace;
-
   justify-content: center;
-  margin-top: 60px;
+  margin-top: 20px;
   text-align: center;
   font-size: 32px;
+}
+.info {
+  font-family: "Courier New", Courier, monospace;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
 }
 
 .item {
@@ -36,8 +41,8 @@
 }
 
 .imagen {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 200px;
 }
 
 .btn {
@@ -55,4 +60,42 @@
   background-color: black;
   color: white;
   cursor: pointer;
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .products {
+    width: 100vw;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .title {
+    font-size: 24px; /* Reduce font size for smaller screens */
+    margin-top: 20px;
+  }
+
+  .info {
+    font-size: 12px; /* Adjust font size for better readability */
+  }
+
+  .item {
+    width: 90%; /* Make items responsive to screen width */
+    height: auto; /* Allow height to adjust based on content */
+    padding: 20px; /* Reduce padding for better fit */
+    margin-bottom: 20px; /* Add space between items */
+  }
+
+  .imagen {
+    height: 120px; /* Adjust image size */
+    width: 120px;
+  }
+
+  .btn {
+    min-width: 80px; /* Adjust button size */
+    padding: 8px 5px; /* Adjust padding */
+  }
 }
