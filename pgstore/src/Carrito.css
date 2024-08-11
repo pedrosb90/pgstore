@@ -35,6 +35,7 @@
   cursor: pointer;
 }
 .total-check {
+  text-align: center;
   align-items: center;
 }
 .cantidad {
