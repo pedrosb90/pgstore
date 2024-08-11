@@ -27,15 +27,24 @@ export const Carrito = () => {
           }
         })}
       </div>
-
-      <div className="total-check">
-        <h1>Total a pagar: $ {totalCheck}</h1>
-        <button onClick={() => navigate("/")} className="btn-out">
-          {" "}
-          Seguir comprando
-        </button>
-        <button className="btn-out">Pagar</button>
-      </div>
+      {totalCheck > 0 ? (
+        <div className="total-check">
+          <h1>Total a pagar: $ {totalCheck}</h1>
+          <button onClick={() => navigate("/")} className="btn-out">
+            {" "}
+            Seguir comprando
+          </button>
+          <button className="btn-out">Pagar</button>
+        </div>
+      ) : (
+        <div className="total-check">
+          <h1> Tu carro está vacío</h1>
+          <button onClick={() => navigate("/")} className="btn-out">
+            {" "}
+            Ver Productos
+          </button>
+        </div>
+      )}
     </div>
   );
 };
