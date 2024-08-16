@@ -46,9 +46,9 @@ app.post("/crear-preferencia", (req, res) => {
   const preference = {
     items: items,
     back_urls: {
-      success: "https://pedrostrauch.com/success",
-      failure: "https://pedrostrauch.com/failure",
-      pending: "https://pedrostrauch.com/pending",
+      success: "https://localhost:3000/success",
+      failure: "https://localhost:3000/failure",
+      pending: "https://localhost:3000/pending",
     },
     auto_return: "approved",
   };
