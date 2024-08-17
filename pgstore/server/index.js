@@ -5,8 +5,7 @@ import mercadopago from "mercadopago";
 // const REACT_APP_ACCESS_TOKEN_MP = process.env;
 
 mercadopago.configure({
-  access_token:
-    "APP_USR-2101504994675711-081510-7da91e08f7fffa2e796e8e6349af7c68-86176872",
+  access_token: "",
   timeout: 10000,
 });
 

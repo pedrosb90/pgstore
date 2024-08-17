@@ -14,7 +14,7 @@ export const Carrito = () => {
   const [preferenceId, setPreferenceId] = useState(null);
 
   useEffect(() => {
-    initMercadoPago("APP_USR-891c2467-1d8c-46cf-8b8e-ad7be1c7d96b", {
+    initMercadoPago("", {
       locale: "es-UY",
     });
     setPreferenceId(null);
