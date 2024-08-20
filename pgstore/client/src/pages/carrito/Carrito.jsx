@@ -7,14 +7,17 @@ import { ItemEnCarrito } from "./ItemEnCarrito";
 import { useNavigate } from "react-router-dom";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import axios from "axios";
-// const REACT_APP_YOUR_PUBLIC_KEY = process.env;
+
+const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
+const testKey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
 
 export const Carrito = () => {
   const { itemsCarrito } = useContext(Shop_context);
   const [preferenceId, setPreferenceId] = useState(null);
+  const [walletVisible, setWalletVisible] = useState(null);
 
   useEffect(() => {
-    initMercadoPago("", {
+    initMercadoPago(testKey, {
       locale: "es-UY",
     });
     setPreferenceId(null);
@@ -66,6 +69,11 @@ export const Carrito = () => {
     }
   };
 
+  const handleCheckout = async () => {
+    handleMercado();
+    setWalletVisible(true);
+  };
+
   return (
     <div className="carrito">
       <div>
@@ -81,21 +89,21 @@ export const Carrito = () => {
       {totalCheck > 0 ? (
         <div className="total-check">
           <h1>Total a pagar: $ {totalCheck}</h1>
-
           {preferenceId ? (
             <Wallet
               initialization={{ preferenceId }}
               customization={{ texts: { valueProp: "smart_option" } }}
             />
-          ) : (
-            <button onClick={handleMercado} className="btn-out">
-              Pagar
-            </button>
-          )}
+          ) : null}
           <button onClick={() => navigate("/")} className="btn-out">
             {" "}
-            Seguir comprando
+            Volver{" "}
           </button>
+          {!walletVisible ? (
+            <button onClick={handleCheckout} className="btn-out">
+              Pagar
+            </button>
+          ) : null}
         </div>
       ) : (
         <div className="total-check">

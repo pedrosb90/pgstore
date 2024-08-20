@@ -14,6 +14,7 @@ const defaultCarrito = () => {
 
 export const Shop_context_provider = (props) => {
   const [itemsCarrito, setItemsCarrito] = useState(defaultCarrito());
+  const [infoSubmitSucceeded, setInfoSubmitSucceeded] = useState(false);
 
   const agregarCarrito = (id) => {
     setItemsCarrito((prev) => ({ ...prev, [id]: prev[id] + 1 }));
@@ -30,12 +31,15 @@ export const Shop_context_provider = (props) => {
       };
     });
   };
-
+  const setSubmitContext = () => {
+    setInfoSubmitSucceeded(true);
+  };
   const contextValue = {
     itemsCarrito,
     agregarCarrito,
     quitarCarrito,
     cambiarValorCantidad,
+    setSubmitContext,
   };
 
   return (
