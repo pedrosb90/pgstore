@@ -1,5 +1,5 @@
 import React from "react";
-import { Info_submit } from "../../components/info_submit";
+import { InfoSubmit } from "../../components/Info_submit";
 
 export const Success = () => {
   return (
@@ -9,7 +9,7 @@ export const Success = () => {
           To compra ha sido un éxito. Por llavor llená este formulario y dejanos
           tus datos para coordinar la entrega:
         </h1>
-        <Info_submit />
+        <InfoSubmit />
       </div>
     </div>
   );

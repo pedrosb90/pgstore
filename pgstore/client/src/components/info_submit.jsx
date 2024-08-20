@@ -1,9 +1,9 @@
-import React, { useContext, useNavigate } from "react";
+import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-import { Shop_context } from "../context/shop_context";
+// import { Shop_context } from "../context/Shop_context";
 
-export const Info_submit = () => {
-  const { setSubmitContext } = useContext(Shop_context);
+export const InfoSubmit = () => {
+  //   const { setSubmitContext } = useContext(Shop_context);
 
   const [state, handleSubmit] = useForm("xwpeqjqg");
   if (state.succeeded) {

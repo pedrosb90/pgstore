@@ -2,7 +2,7 @@ import React from "react";
 import { useState, createContext } from "react";
 import { shopitems } from "../pages/productos/shopitems";
 
-export const Shop_context = createContext(null);
+export const ShopContext = createContext(null);
 
 const defaultCarrito = () => {
   let cart = [];
@@ -12,9 +12,9 @@ const defaultCarrito = () => {
   return cart;
 };
 
-export const Shop_context_provider = (props) => {
+export const ShopContextProvider = (props) => {
   const [itemsCarrito, setItemsCarrito] = useState(defaultCarrito());
-  const [infoSubmitSucceeded, setInfoSubmitSucceeded] = useState(false);
+  const [setInfoSubmitSucceeded] = useState(false);
 
   const agregarCarrito = (id) => {
     setItemsCarrito((prev) => ({ ...prev, [id]: prev[id] + 1 }));
@@ -43,8 +43,8 @@ export const Shop_context_provider = (props) => {
   };
 
   return (
-    <Shop_context.Provider value={contextValue}>
+    <ShopContext.Provider value={contextValue}>
       {props.children}
-    </Shop_context.Provider>
+    </ShopContext.Provider>
   );
 };

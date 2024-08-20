@@ -1,11 +1,11 @@
 import React from "react";
 import { useContext } from "react";
-import { Shop_context } from "../../context/shop_context";
+import { ShopContext } from "../../context/Shop_context";
 
 export const Item = (props) => {
   const { id, title, description, unit_price, imagen } = props.data;
 
-  const { agregarCarrito, itemsCarrito } = useContext(Shop_context);
+  const { agregarCarrito, itemsCarrito } = useContext(ShopContext);
 
   const cantidadEnCarrito = itemsCarrito[id];
 

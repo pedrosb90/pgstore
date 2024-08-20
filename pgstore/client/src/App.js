@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { Carrito } from "./pages/carrito/Carrito";
 import { Productos } from "./pages/productos/Productos.jsx";
-import { Shop_context_provider } from "./context/shop_context";
+import { ShopContextProvider } from "./context/Shop_context";
 import { Success } from "./pages/success/success";
 import { Failure } from "./pages/failure/failure";
 import { Pending } from "./pages/pending/pending";
@@ -14,7 +14,7 @@ import { Pending } from "./pages/pending/pending";
 function App() {
   return (
     <div className="App">
-      <Shop_context_provider>
+      <ShopContextProvider>
         <Router>
           <Navbar />
           <Routes>
@@ -25,7 +25,7 @@ function App() {
             <Route path="/pending" element={<Pending />} />
           </Routes>
         </Router>
-      </Shop_context_provider>{" "}
+      </ShopContextProvider>{" "}
     </div>
   );
 }

@@ -2,17 +2,17 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext, useState } from "react";
 import { shopitems } from "../productos/shopitems";
-import { Shop_context } from "../../context/shop_context";
+import { ShopContext } from "../../context/Shop_context";
 import { ItemEnCarrito } from "./ItemEnCarrito";
 import { useNavigate } from "react-router-dom";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import axios from "axios";
 
 const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
-const testKey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
+// const testKey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
 
 export const Carrito = () => {
-  const { itemsCarrito } = useContext(Shop_context);
+  const { itemsCarrito } = useContext(ShopContext);
   const [preferenceId, setPreferenceId] = useState(null);
   const [walletVisible, setWalletVisible] = useState(null);
 
@@ -84,6 +84,7 @@ export const Carrito = () => {
           if (itemsCarrito[producto.id] !== 0) {
             return <ItemEnCarrito key={producto.id} data={producto} />;
           }
+          return null;
         })}
       </div>
       {totalCheck > 0 ? (
