@@ -17,7 +17,7 @@ export const Carrito = () => {
   const [walletVisible, setWalletVisible] = useState(null);
 
   useEffect(() => {
-    initMercadoPago(testKey, {
+    initMercadoPago(key, {
       locale: "es-UY",
     });
     setPreferenceId(null);
