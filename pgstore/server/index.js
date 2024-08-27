@@ -18,7 +18,10 @@ app.use(cors());
 app.use(express.json());
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Origin",
+    "https://puntagoodsstore-pedrosb90-s-team.vercel.app"
+  );
   res.header(
     "Access-Control-Allow-Headers",
     "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
