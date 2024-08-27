@@ -46,7 +46,7 @@ export const Carrito = () => {
           };
         });
       const response = await axios.post(
-        "http://localhost:3001/crear-preferencia",
+        "https://puntagoodsstore-pedrosb90-s-team.vercel.app/crear-preferencia",
         { items }
       );
       const { preferenceId } = response.data;

@@ -50,9 +50,9 @@ app.post("/crear-preferencia", (req, res) => {
   const preference = {
     items: items,
     back_urls: {
-      success: "https://localhost:3000/success",
-      failure: "https://localhost:3000/failure",
-      pending: "https://localhost:3000/pending",
+      success: "https://puntagoodsstore-pedrosb90-s-team.vercel.app/success",
+      failure: "https://puntagoodsstore-pedrosb90-s-team.vercel.app/failure",
+      pending: "https://puntagoodsstore-pedrosb90-s-team.vercel.app/pending",
     },
     auto_return: "approved",
   };
