@@ -15,7 +15,7 @@ const app = express();
 const port = 3001;
 
 const allowedOrigins = [
-  "http://pgstore-kmx3ibks5-pedrosb90-s-team.vercel.app",
+  "https://pgstore-delta.vercel.app",
   "http://localhost:3000",
 ];
 
