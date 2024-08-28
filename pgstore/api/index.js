@@ -14,22 +14,25 @@ mercadopago.configure({
 const app = express();
 const port = 3001;
 
-const allowedOrigins = [
-  "http://pgstore-delta.vercel.app",
-  "http://back-pgstore.vercel.app",
-  "http://localhost:3000",
-];
+// const allowedOrigins = [
+//   "http://pgstore-delta.vercel.app",
+//   "http://back-pgstore.vercel.app",
+//   "http://localhost:3000",
+//   "*",
+// ];
 
-app.use(cors({ origin: allowedOrigins }));
+// app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
 app.use((req, res, next) => {
   res.header(
     "Access-Control-Allow-Headers",
+    "http://pgstore-delta.vercel.app",
+    "http://back-pgstore.vercel.app",
     "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
   );
-  // res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-  // res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
+  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+  res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
 
   if (req.method === "OPTIONS") {
     return res.sendStatus(200);
