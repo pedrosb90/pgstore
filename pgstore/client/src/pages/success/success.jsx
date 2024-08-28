@@ -1,6 +1,5 @@
 import React from "react";
-import { InfoSubmit } from "../../components/Info_submit";
-
+import { InfoSubmit } from "../../components/InfoSubmit";
 export const Success = () => {
   return (
     <div>
