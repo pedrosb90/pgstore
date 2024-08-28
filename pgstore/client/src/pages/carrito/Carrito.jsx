@@ -10,6 +10,8 @@ import axios from "axios";
 
 const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
 const testkey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
+const vercelbackURL =
+  "https://back-pgstore-h50sglfz3-pedrosb90-s-team.vercel.app";
 
 export const Carrito = () => {
   const { itemsCarrito } = useContext(ShopContext);
@@ -45,10 +47,9 @@ export const Carrito = () => {
             currency_id: "UYU",
           };
         });
-      const response = await axios.post(
-        "http://localhost:3001/crear-preferencia",
-        { items }
-      );
+      const response = await axios.post(`${vercelbackURL}/crear-preferencia`, {
+        items,
+      });
       const { preferenceId } = response.data;
       return preferenceId;
     } catch (error) {
