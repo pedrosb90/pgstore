@@ -14,25 +14,21 @@ mercadopago.configure({
 const app = express();
 const port = 3001;
 
-app.use(cors());
+const allowedOrigins = [
+  "pgstore-kmx3ibks5-pedrosb90-s-team.vercel.app",
+  "http://localhost:3000",
+];
+
+app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
 app.use((req, res, next) => {
-  const allowedOrigins = [
-    "https://pgstore-2ch0fsm2k-pedrosb90-s-team.vercel.app/",
-  ];
-  const origin = req.headers.origin;
-
-  if (allowedOrigins.includes(origin)) {
-    res.header("Access-Control-Allow-Origin", origin);
-  }
-
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
-  );
-  res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
-  res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
+  // res.header(
+  //   "Access-Control-Allow-Headers",
+  //   "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
+  // );
+  // res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+  // res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
 
   if (req.method === "OPTIONS") {
     return res.sendStatus(200);
