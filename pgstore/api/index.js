@@ -3,11 +3,11 @@ import cors from "cors";
 import mercadopago from "mercadopago";
 
 const token = process.env.REACT_APP_ACCESS_TOKEN_MP;
-// const testToken =
-//   "APP_USR-108363577051863-081514-df8ee2b0ac776ab33c5ae290d0550120-1943750874";
+const testtoken =
+  "APP_USR-108363577051863-081514-df8ee2b0ac776ab33c5ae290d0550120-1943750874";
 
 mercadopago.configure({
-  access_token: token,
+  access_token: testtoken,
   timeout: 1000,
 });
 
@@ -18,13 +18,18 @@ app.use(cors());
 app.use(express.json());
 
 app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://localhost:3001");
+  res.header("Access-Control-Allow-Origin", "*");
   res.header(
     "Access-Control-Allow-Headers",
     "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
   );
   res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
+
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+
   next();
 });
 
@@ -47,13 +52,12 @@ app.post("/crear-preferencia", (req, res) => {
   const preference = {
     items: items,
     back_urls: {
-      success: "https://puntagoodsstore-pedrosb90-s-team.vercel.app/success",
-      failure: "https://puntagoodsstore-pedrosb90-s-team.vercel.app/failure",
-      pending: "https://puntagoodsstore-pedrosb90-s-team.vercel.app/pending",
+      success: "https://localhost:3000/success",
+      failure: "https://localhost:3000/failure",
+      pending: "https://localhost:3000/pending",
     },
     auto_return: "approved",
   };
-
   // const pref = new Preference(client);
   // pref.create(preference).then((result) => {
   //   const preferenceId = result.body.id;
