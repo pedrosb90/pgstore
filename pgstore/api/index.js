@@ -15,8 +15,8 @@ const app = express();
 const port = 3001;
 
 const allowedOrigins = [
-  "https://pgstore-delta.vercel.app",
-  "https://back-pgstore-h50sglfz3-pedrosb90-s-team.vercel.app",
+  "http://pgstore-delta.vercel.app",
+  "http://back-pgstore-h50sglfz3-pedrosb90-s-team.vercel.app",
   "http://localhost:3000",
 ];
 
@@ -24,10 +24,10 @@ app.use(cors({ origin: allowedOrigins }));
 app.use(express.json());
 
 app.use((req, res, next) => {
-  // res.header(
-  //   "Access-Control-Allow-Headers",
-  //   "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
-  // );
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method"
+  );
   // res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
   // res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
 

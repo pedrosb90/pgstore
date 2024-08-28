@@ -11,7 +11,7 @@ import axios from "axios";
 const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
 const testkey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
 const vercelbackURL =
-  "https://back-pgstore-h50sglfz3-pedrosb90-s-team.vercel.app";
+  "https://back-pgstore-gqi0dj2ty-pedrosb90-s-team.vercel.app";
 
 export const Carrito = () => {
   const { itemsCarrito } = useContext(ShopContext);
