@@ -19,7 +19,6 @@ app.use(express.json());
 
 app.use((req, res, next) => {
   const allowedOrigins = [
-    "http://localhost:3000",
     "https://pgstore-2ch0fsm2k-pedrosb90-s-team.vercel.app/",
   ];
   const origin = req.headers.origin;
