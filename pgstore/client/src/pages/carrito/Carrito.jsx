@@ -7,6 +7,7 @@ import { ItemEnCarrito } from "./ItemEnCarrito";
 import { useNavigate } from "react-router-dom";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import axios from "axios";
+import { env, process } from "process";
 
 const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
 const testkey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
@@ -18,7 +19,7 @@ export const Carrito = () => {
   const [walletVisible, setWalletVisible] = useState(null);
 
   useEffect(() => {
-    initMercadoPago(testkey, {
+    initMercadoPago(key, {
       locale: "es-UY",
     });
     setPreferenceId(null);

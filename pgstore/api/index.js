@@ -7,7 +7,7 @@ const testtoken =
   "APP_USR-108363577051863-081514-df8ee2b0ac776ab33c5ae290d0550120-1943750874";
 
 mercadopago.configure({
-  access_token: testtoken,
+  access_token: token,
   timeout: 1000,
 });
 
