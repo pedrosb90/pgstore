@@ -9,7 +9,7 @@ import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import axios from "axios";
 
 const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
-const testkey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
+// const testkey = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
 const vercelbackURL = "https://back-pgstore.vercel.app";
 
 export const Carrito = () => {
@@ -18,10 +18,14 @@ export const Carrito = () => {
   const [walletVisible, setWalletVisible] = useState(null);
 
   useEffect(() => {
-    initMercadoPago(key, {
-      locale: "es-UY",
-    });
-    setPreferenceId(null);
+    if (key) {
+      initMercadoPago(key, {
+        locale: "es-UY",
+      });
+      setPreferenceId(null);
+    } else {
+      console.error("MercadoPago public key is not defined");
+    }
   }, []);
 
   const totalCheck = shopitems.reduce((acc, item) => {
