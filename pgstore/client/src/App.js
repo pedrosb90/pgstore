@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { Carrito } from "./pages/carrito/Carrito";
 import { Productos } from "./pages/productos/Productos.jsx";
-import { ShopContextProvider } from "./context/Shop_context";
+import { ShopContextProvider } from "./context/ShopContext";
 import { Success } from "./pages/success/success";
 import { Failure } from "./pages/failure/failure";
 import { Pending } from "./pages/pending/pending";

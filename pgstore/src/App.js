@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/navbar";
 import { Carrito } from "./pages/carrito/carrito";
 import { Productos } from "./pages/productos/Productos.jsx";
-import { Shop_context_provider } from "./context/shop_context";
+import { Shop_context_provider } from "./context/ShopContext";
 
 import "./App.css";
 import "./Navbar.css";

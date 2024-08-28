@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useContext, useState } from "react";
 import { shopitems } from "../productos/shopitems";
-import { ShopContext } from "../../context/Shop_context";
+import { ShopContext } from "../../context/ShopContext";
 import { ItemEnCarrito } from "./ItemEnCarrito";
 import { useNavigate } from "react-router-dom";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
