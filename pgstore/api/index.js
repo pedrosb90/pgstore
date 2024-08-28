@@ -16,6 +16,7 @@ const port = 3001;
 
 const allowedOrigins = [
   "https://pgstore-delta.vercel.app",
+  "https://back-pgstore-h50sglfz3-pedrosb90-s-team.vercel.app",
   "http://localhost:3000",
 ];
 
