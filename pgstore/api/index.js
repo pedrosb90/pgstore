@@ -61,9 +61,9 @@ app.post("/crear-preferencia", (req, res) => {
   const preference = {
     items: items,
     back_urls: {
-      success: "https://localhost:3000/success",
-      failure: "https://localhost:3000/failure",
-      pending: "https://localhost:3000/pending",
+      success: "https://pgstore-delta.vercel.app//success",
+      failure: "https://pgstore-delta.vercel.app//failure",
+      pending: "https://pgstore-delta.vercel.app//pending",
     },
     auto_return: "approved",
   };
