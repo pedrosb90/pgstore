@@ -119,12 +119,12 @@ textarea {
   }
 
   .item-container {
+    justify-content: center;
     flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items */
   }
 
   .title {
-    font-size: 24px; /* Reduce font size for smaller screens */
+    font-size: 20px; /* Reduce font size for smaller screens */
     margin-top: 20px;
   }
 
@@ -137,6 +137,7 @@ textarea {
     width: 90%; /* Make items responsive to screen width */
     margin-right: 0; /* Remove right margin */
     margin-left: 0; /* Remove left margin */
+    align-items: center;
   }
 
   .imagen {
@@ -147,5 +148,6 @@ textarea {
   .btn {
     min-width: 80px; /* Adjust button size */
     padding: 8px 5px; /* Adjust padding */
+    text-decoration: none;
   }
 }

@@ -42,9 +42,9 @@
   margin-top: 90px;
 }
 .irCarro-btn {
-  justify-items: end;
   text-align: center;
   align-items: center;
+  justify-content: center;
 }
 .cantidad {
   width: 25px;
@@ -64,5 +64,10 @@
 @media only screen and (max-width: 480px) {
   .item-carrito {
     width: 80vw;
+  }
+  .total-check {
+    text-align: center;
+    align-items: center;
+    font-size: smaller;
   }
 }
