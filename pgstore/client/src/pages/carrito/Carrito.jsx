@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import axios from "axios";
 
-const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
-// const key = "APP_USR-c45cff90-4d26-4a1a-85c8-7cdb5712f7cb";
+// const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
+const key = "APP_USR-c45cff90-4d26-4a1a-85c8-7cdb5712f7cb";
 const vercelbackURL = "https://back-pgstore.vercel.app";
 // const vercelbackURL = "https://localhost:3001";
 
