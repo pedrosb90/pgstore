@@ -39,6 +39,12 @@
 .total-check {
   text-align: center;
   align-items: center;
+  margin-top: 90px;
+}
+.irCarro-btn {
+  justify-items: end;
+  text-align: center;
+  align-items: center;
 }
 .cantidad {
   width: 25px;

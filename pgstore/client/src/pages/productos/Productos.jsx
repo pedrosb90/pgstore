@@ -12,14 +12,12 @@ export const Productos = () => {
       <p className="info">Entregas diarias en Maldonado y Punta del Este</p>
       <p className="info">Miercoles en Montevideo</p>
 
-      <div className="products">
-        <div>
-          {shopitems.map((producto) => (
-            <Item data={producto} />
-          ))}
-        </div>
+      <div className="item-container">
+        {shopitems.map((producto) => (
+          <Item data={producto} />
+        ))}
       </div>
-      <div className="total-check">
+      <div className="irCarro-btn">
         <button onClick={() => navigate("/carrito")} className="btn-out">
           {" "}
           Ir a carro de compras{" "}

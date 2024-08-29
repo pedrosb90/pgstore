@@ -13,7 +13,7 @@ export const ItemEnCarrito = (props) => {
   const totalPrecioItem = cantidadEnCarrito * unit_price;
 
   return (
-    <div className="carrito">
+    <div>
       {" "}
       <div className="item-carrito">
         {/* <h2>Cantidad: {cantidadEnCarrito}</h2> */}
