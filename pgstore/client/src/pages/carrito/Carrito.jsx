@@ -11,6 +11,7 @@ import axios from "axios";
 const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
 // const key = "APP_USR-c45cff90-4d26-4a1a-85c8-7cdb5712f7cb";
 const vercelbackURL = "https://back-pgstore.vercel.app";
+// const vercelbackURL = "https://localhost:3001";
 
 export const Carrito = () => {
   const { itemsCarrito } = useContext(ShopContext);
@@ -23,6 +24,7 @@ export const Carrito = () => {
     });
     setPreferenceId(null);
   }, []);
+  console.log("Public Key:", process.env.REACT_APP_YOUR_PUBLIC_KEY);
 
   const totalCheck = shopitems.reduce((acc, item) => {
     const itemCantidad = itemsCarrito[item.id] || 0;
