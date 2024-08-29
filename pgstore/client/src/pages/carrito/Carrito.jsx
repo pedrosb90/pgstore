@@ -9,7 +9,7 @@ import { initMercadoPago, Wallet } from "@mercadopago/sdk-react";
 import axios from "axios";
 
 // const key = process.env.REACT_APP_YOUR_PUBLIC_KEY;
-const key = "APP_USR-5ff4cba9-e162-4b7d-90af-0d5140331304";
+const key = "APP_USR-c45cff90-4d26-4a1a-85c8-7cdb5712f7cb";
 const vercelbackURL = "https://back-pgstore.vercel.app";
 
 export const Carrito = () => {
