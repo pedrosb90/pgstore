@@ -2,10 +2,10 @@ import express from "express";
 import cors from "cors";
 import mercadopago from "mercadopago";
 
-// const token = process.env.REACT_APP_ACCESS_TOKEN_MP;
+const token = process.env.REACT_APP_ACCESS_TOKEN_MP;
 
-const token =
-  "APP_USR-2101504994675711-082816-67794742698810fc28bc0ca836d07940-86176872";
+// const token =
+//   "APP_USR-2101504994675711-082816-67794742698810fc28bc0ca836d07940-86176872";
 
 mercadopago.configure({
   access_token: token,
