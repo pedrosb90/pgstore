@@ -20,7 +20,6 @@ export const Item = (props) => {
           Agregar {cantidadEnCarrito > 0 && <> ({cantidadEnCarrito})</>}
         </button>
       </div>
-
       <img className="imagen" src={imagen} alt="img" />
     </div>
   );

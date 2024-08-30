@@ -93,8 +93,10 @@ textarea {
 }
 
 .imagen {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  object-fit: contain;
 }
 
 .btn {
@@ -122,6 +124,12 @@ textarea {
     justify-content: center;
     flex-direction: column; /* Stack items vertically */
   }
+  .item .description {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    padding-right: 20px;
+    min-width: 90vw;
+  }
 
   .title {
     font-size: 20px; /* Reduce font size for smaller screens */
@@ -134,20 +142,26 @@ textarea {
   }
 
   .item {
-    width: 90%; /* Make items responsive to screen width */
+    width: 100%; /* Make items responsive to screen width */
     margin-right: 0; /* Remove right margin */
     margin-left: 0; /* Remove left margin */
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
-
   .imagen {
-    height: 60px; /* Adjust image size */
-    width: 60px;
+    padding: 10px;
   }
-
   .btn {
     min-width: 80px; /* Adjust button size */
-    padding: 8px 5px; /* Adjust padding */
+    padding: 10px 10px; /* Adjust padding */
     text-decoration: none;
+    align-items: center;
+    text-align: center;
+  }
+  .btn:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
   }
 }
