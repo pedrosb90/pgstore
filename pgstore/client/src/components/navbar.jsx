@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
-import pglogo from "../assets/logo.png";
+import pglogo from "../assets/logo2.png";
 
 export const Navbar = () => {
   return (
