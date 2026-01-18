@@ -8,9 +8,14 @@ export const Productos = () => {
 
   return (
     <div className="container">
-      <h1 className="title">Shop</h1>
-      <p className="info">Entregas diarias en Maldonado y Punta del Este</p>
-      <p className="info">Miercoles en Montevideo</p>
+      <br />
+      <h1 className="title">PePéPe</h1>
+
+      <p className="info">
+        Entrego personalmente MARTES y JUEVES en Maldonado, Piriápolis y Punta
+        del Este
+      </p>
+      <p className="info">Comprá y pagá con MERCADOPAGO</p>
 
       <div className="item-container">
         {shopitems.map((producto) => (
