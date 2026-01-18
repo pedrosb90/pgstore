@@ -23,7 +23,7 @@ export const Carrito = () => {
       locale: "es-UY",
     });
     setPreferenceId(null);
-  }, []);
+  }, [key]);
   console.log("Public Key:", process.env.REACT_APP_YOUR_PUBLIC_KEY);
 
   const totalCheck = shopitems.reduce((acc, item) => {
