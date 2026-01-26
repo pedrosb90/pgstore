@@ -12,10 +12,9 @@ export const Productos = () => {
       <h1 className="title">PePéPe</h1>
 
       <p className="info">
-        Entrego personalmente MARTES y JUEVES en Maldonado, Piriápolis y Punta
-        del Este
+        Entrego personalmente MARTES y JUEVES en Maldonado y Punta del Este.
       </p>
-      <p className="info">Comprá y pagá con MERCADOPAGO</p>
+      <p className="info">MERCADOPAGO o Transferencia</p>
 
       <div className="item-container">
         {shopitems.map((producto) => (
