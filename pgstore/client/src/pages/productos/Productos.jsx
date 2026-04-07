@@ -12,7 +12,8 @@ export const Productos = () => {
       <h1 className="title">PePéPe</h1>
 
       <p className="info">
-        Entrego los MIERCOLES en departamento de Maldonado.
+        Entregas en Maldonado Todos los días. Montevideo: Lunes, superior a
+        $2500.
       </p>
       <p className="info">
         $$ TRANSFERENCIA $$: Armá tu carro y envia captura de pantalla por
