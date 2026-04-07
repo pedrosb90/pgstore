@@ -14,7 +14,10 @@ export const Productos = () => {
       <p className="info">
         Entrego los MIERCOLES en departamento de Maldonado.
       </p>
-      <p className="info">Pago por TRANSFERENCIA: Pedir por Whatsapp'</p>
+      <p className="info">
+        $$ TRANSFERENCIA $$: Armá tu carro y envia captura de pantalla por
+        Whatsapp.
+      </p>
       <div className="item-container">
         {shopitems.map((producto) => (
           <Item data={producto} />
