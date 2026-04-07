@@ -38,7 +38,7 @@ export const shopitems = [
     id: "4",
     title: "Salsa BBQ Suavemente Picante",
     unit_price: 200,
-    description: "500 ml",
+    description: "Sachet de aluminio 500 ml",
     imagen: imgChica,
   },
 ];
