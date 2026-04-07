@@ -1,4 +1,5 @@
 import imgGrande from "../../assets/sorren.jpg";
+import imgChica from "../../assets/populonga.jpg";
 
 export const shopitems = [
   {
@@ -18,7 +19,7 @@ export const shopitems = [
     imagen: imgGrande,
   },
   {
-    id: "1",
+    id: "2",
     title: "8 Sorrentinos de Salmonete, Ricotta y Pistacchio",
     unit_price: 320,
     description:
@@ -26,18 +27,18 @@ export const shopitems = [
     imagen: imgGrande,
   },
   {
-    id: "2",
+    id: "3",
     title: "8 Sorrentinos Verdes",
     unit_price: 280,
     description:
       "Masa blanca con relleno de espinaca, puerro, parmesano y nueces. Va bien con pomodoro.",
     imagen: imgGrande,
   },
-  // {
-  //   id: "1",
-  //   title: "Salsa BBQ AMARRETA",
-  //   unit_price: 150,
-  //   description: "145 ml",
-  //   imagen: imgChica,
-  // },
+  {
+    id: "4",
+    title: "Salsa BBQ Suavemente Picante",
+    unit_price: 200,
+    description: "500 ml",
+    imagen: imgChica,
+  },
 ];
