@@ -1,6 +1,7 @@
 .container {
   height: 60%;
   width: auto;
+  overflow: scroll;
 }
 .products {
   justify-content: center;

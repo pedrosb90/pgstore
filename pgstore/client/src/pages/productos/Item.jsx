@@ -14,7 +14,7 @@ export const Item = (props) => {
       <div className="description">
         {" "}
         <h3 className="name">{title}</h3>
-        <p className="tamaño">Tamaño: {description}</p>
+        <p className="tamaño"> {description}</p>
         <h2 className="precio">Precio: $ {unit_price}</h2>
         <button className="btn" onClick={() => agregarCarrito(id)}>
           Agregar {cantidadEnCarrito > 0 && <> ({cantidadEnCarrito})</>}
