@@ -11,14 +11,8 @@ export const Productos = () => {
       <br />
       <h1 className="title">PePéPe</h1>
 
-      <p className="info">
-        Entregas en Maldonado Todos los días. Montevideo: Lunes, superior a
-        $2500.
-      </p>
-      <p className="info">
-        $$ TRANSFERENCIA $$: Armá tu carro y envia captura de pantalla por
-        Whatsapp.
-      </p>
+      <p className="info">Envíos a todos lados.</p>
+      <p className="info">$$ TRANSFERENCIA o Mercadopago $$</p>
       <div className="item-container">
         {shopitems.map((producto) => (
           <Item data={producto} />

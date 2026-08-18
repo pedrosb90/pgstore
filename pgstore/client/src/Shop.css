@@ -1,5 +1,5 @@
 .container {
-  height: 60%;
+  height: 100%;
   width: auto;
   overflow: scroll;
 }
@@ -94,10 +94,10 @@ textarea {
 }
 
 .imagen {
-  height: 180px;
-  width: 180px;
-  border-radius: 50%;
-  object-fit: contain;
+  height: 40%;
+  width: 40%;
+  border-radius: 0;
+  object-fit: cover;
 }
 
 .btn {
